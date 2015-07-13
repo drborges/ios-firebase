@@ -13,6 +13,7 @@
 		365C90DA1B5456F200DC8EA2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 365C90D91B5456F200DC8EA2 /* Images.xcassets */; };
 		365C90DD1B5456F200DC8EA2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 365C90DB1B5456F200DC8EA2 /* LaunchScreen.xib */; };
 		365C90E91B5456F200DC8EA2 /* BearchChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365C90E81B5456F200DC8EA2 /* BearchChatTests.swift */; };
+		E557F7B53BCD23C5F108EDAA /* libPods-BearchChat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 984ED613650E0734DB84D56E /* libPods-BearchChat.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,10 @@
 		365C90E21B5456F200DC8EA2 /* BearchChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BearchChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		365C90E71B5456F200DC8EA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		365C90E81B5456F200DC8EA2 /* BearchChatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BearchChatTests.swift; sourceTree = "<group>"; };
+		36F374361B54675000706C04 /* BearchChat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BearchChat-Bridging-Header.h"; sourceTree = "<group>"; };
+		6AB414EA7CC601A3A8677E65 /* Pods-BearchChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BearchChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-BearchChat/Pods-BearchChat.release.xcconfig"; sourceTree = "<group>"; };
+		82F03ED9EB5BD453F306CDAA /* Pods-BearchChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BearchChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BearchChat/Pods-BearchChat.debug.xcconfig"; sourceTree = "<group>"; };
+		984ED613650E0734DB84D56E /* libPods-BearchChat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BearchChat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E557F7B53BCD23C5F108EDAA /* libPods-BearchChat.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +62,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1063B1F0F30D56ACE32EFF72 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				82F03ED9EB5BD453F306CDAA /* Pods-BearchChat.debug.xcconfig */,
+				6AB414EA7CC601A3A8677E65 /* Pods-BearchChat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		365C90C41B5456F100DC8EA2 = {
 			isa = PBXGroup;
 			children = (
 				365C90CF1B5456F200DC8EA2 /* BearchChat */,
 				365C90E51B5456F200DC8EA2 /* BearchChatTests */,
 				365C90CE1B5456F200DC8EA2 /* Products */,
+				1063B1F0F30D56ACE32EFF72 /* Pods */,
+				81537FD99D17ED442E140CE4 /* Frameworks */,
+				36F374361B54675000706C04 /* BearchChat-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +130,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		81537FD99D17ED442E140CE4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				984ED613650E0734DB84D56E /* libPods-BearchChat.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +145,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 365C90EC1B5456F200DC8EA2 /* Build configuration list for PBXNativeTarget "BearchChat" */;
 			buildPhases = (
+				B7C59542B017CCF49C09A17F /* Check Pods Manifest.lock */,
 				365C90C91B5456F200DC8EA2 /* Sources */,
 				365C90CA1B5456F200DC8EA2 /* Frameworks */,
 				365C90CB1B5456F200DC8EA2 /* Resources */,
+				572B97EBDCB1421C14C9D282 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,6 +234,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		572B97EBDCB1421C14C9D282 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BearchChat/Pods-BearchChat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7C59542B017CCF49C09A17F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		365C90C91B5456F200DC8EA2 /* Sources */ = {
@@ -340,21 +401,28 @@
 		};
 		365C90ED1B5456F200DC8EA2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82F03ED9EB5BD453F306CDAA /* Pods-BearchChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BearchChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BearchChat-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		365C90EE1B5456F200DC8EA2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AB414EA7CC601A3A8677E65 /* Pods-BearchChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BearchChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BearchChat-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -411,6 +479,7 @@
 				365C90EE1B5456F200DC8EA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		365C90EF1B5456F200DC8EA2 /* Build configuration list for PBXNativeTarget "BearchChatTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +488,7 @@
 				365C90F11B5456F200DC8EA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
